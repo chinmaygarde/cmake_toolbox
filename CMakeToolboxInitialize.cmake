@@ -18,6 +18,7 @@ include(CheckPlatform)
 include(EnableCCache)
 include(EnableLTO)
 include(HardenToolchain)
+include(SetCAndCXXStandard)
 include(SymbolVisibility)
 include(TreatAsCXX)
 
