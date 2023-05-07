@@ -20,3 +20,17 @@ if(${WARNING_LABEL})
 endif()
 
 endmacro()
+
+################################################################################
+# Enables a C warning if the compiler supports it.
+################################################################################
+
+macro(AddCWarningIfSupported WARNING_FLAG WARNING_LABEL)
+
+check_cxx_compiler_flag(${WARNING_FLAG} ${WARNING_LABEL})
+
+if(${WARNING_LABEL})
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${WARNING_FLAG} ")
+endif()
+
+endmacro()
