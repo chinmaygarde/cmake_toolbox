@@ -13,18 +13,13 @@ include(CheckIncludeFiles)
 
 macro(CheckPlatform)
 
-# The RaspberryPi has the bcm_host.h file at a specific location.
-check_include_files("/opt/vc/include/bcm_host.h" RASPBERRY)
-
 if(WIN32)
   if(NOT WINDOWS)
     set(WINDOWS TRUE)
   endif()
 elseif(UNIX AND NOT APPLE)
   if(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
-    if(NOT RASPBERRY)
-      set(LINUX TRUE)
-    endif()
+    set(LINUX TRUE)
   elseif(CMAKE_SYSTEM_NAME MATCHES "kFreeBSD.*")
     set(FREEBSD TRUE)
   elseif(CMAKE_SYSTEM_NAME MATCHES "kNetBSD.*|NetBSD.*")
