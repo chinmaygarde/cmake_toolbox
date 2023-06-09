@@ -21,6 +21,7 @@ include(HardenToolchain)
 include(SetCAndCXXStandard)
 include(SymbolVisibility)
 include(TreatAsCXX)
+include(AddCompileOptionIfSupported)
 
 endmacro()
 

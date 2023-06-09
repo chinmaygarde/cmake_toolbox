@@ -8,7 +8,7 @@ set(__add_cxx_warning_if_supported INCLUDED)
 include(CheckCXXCompilerFlag)
 
 ################################################################################
-# Enables a CXX warning if the compiler supports it.
+# Enables a CXX warning globally if the compiler supports it.
 ################################################################################
 
 macro(AddCXXWarningIfSupported WARNING_FLAG WARNING_LABEL)
@@ -22,7 +22,7 @@ endif()
 endmacro()
 
 ################################################################################
-# Enables a C warning if the compiler supports it.
+# Enables a C warning globally if the compiler supports it.
 ################################################################################
 
 macro(AddCWarningIfSupported WARNING_FLAG WARNING_LABEL)
