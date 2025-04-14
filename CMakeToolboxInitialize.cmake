@@ -22,6 +22,7 @@ include(SetCAndCXXStandard)
 include(SymbolVisibility)
 include(TreatAsCXX)
 include(AddCompileOptionIfSupported)
+include(XXD)
 
 endmacro()
 
