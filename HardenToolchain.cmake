@@ -44,6 +44,13 @@ if(APPLE)
   set(CMAKE_EXE_LINKER_FLAGS " ${CMAKE_EXE_LINKER_FLAGS} -Wl,-pie ")
 endif()
 
+if (QNX)
+  set(PIE_FLAGS "-fPIC")
+  set(CMAKE_C_FLAGS   " ${CMAKE_C_FLAGS} ${PIE_FLAGS} ")
+  set(CMAKE_CXX_FLAGS " ${CMAKE_CXX_FLAGS} ${PIE_FLAGS} ")
+  set(CMAKE_EXE_LINKER_FLAGS " ${CMAKE_EXE_LINKER_FLAGS} -Wl,-pie ")
+endif()
+
 
 ################################################################################
 # GOT/REL Protection
